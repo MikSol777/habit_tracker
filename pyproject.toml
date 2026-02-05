@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "habit-tracker"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+djangorestframework = "^3.16.1"
+psycopg2-binary = "^2.9.11"
+python-dotenv = "^1.2.1"
+django-cors-headers = "^4.9.0"
+djangorestframework-simplejwt = "^5.5.1"
+drf-yasg = "^1.21.14"
+celery = "^5.6.2"
+redis = "^7.1.0"
+requests = "^2.32.5"
+python-telegram-bot = "^22.6"
+django-filter = "^25.2"
+django = "^6.0.2"
+dotenv = "^0.9.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+pytest-django = "^4.11.1"
+pytest-cov = "^7.0.0"
+flake8 = "^7.3.0"
+flake8-bugbear = "^25.11.29"
+flake8-comprehensions = "^3.17.0"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+addopts = "-v --tb=short"
+testpaths = ["habits", "users", "telegram_bot"]
+python_files = ["test_*.py", "*_test.py", "tests.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

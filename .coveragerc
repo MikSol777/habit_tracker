@@ -1,0 +1,9 @@
+[run]
+source = habits,users,telegram_bot,config
+omit = */migrations/*,*/__pycache__/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
