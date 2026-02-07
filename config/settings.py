@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "users",
     "habits",
     "telegram_bot",
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
